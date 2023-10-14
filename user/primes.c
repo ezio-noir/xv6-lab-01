@@ -8,7 +8,6 @@ void prime(int pipeLeft[]) {
     close(pipeLeft[1]);
     int p;
     if (read(pipeLeft[0], &p, sizeof(p)) == 0) {
-        fprintf(2, "Error: cannot read from pipe\n");
         exit(1);
     }
     else {
